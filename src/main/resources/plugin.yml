@@ -1,0 +1,8 @@
+name: SafeSpectate
+version: ${project.version}
+main: com.jacobneave.safespectate.SafeSpectate
+api-version: 1.16
+prefix: [ SafeSpectate ]
+authors: [ jacobneave ]
+description: A Spigot plugin for smp servers that allows players to use spectator as a freecam without being able to use it as a form of teleportation.
+website: https://www.jacobneave.com/
