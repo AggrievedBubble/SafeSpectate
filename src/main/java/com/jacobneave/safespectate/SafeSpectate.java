@@ -17,23 +17,17 @@ public final class SafeSpectate extends JavaPlugin implements Listener {
 	@Override
 	public void onLoad() {
 
-		//set command executors
-		try {
-			Objects.requireNonNull(getCommand("spectate")).setExecutor(new Spectate());
-		} catch (NullPointerException ex) {
-			getLogger().severe("Failed To Load Commands, " + getDescription().getName() + " " + getDescription().getVersion() + " not Loaded");
-			getPluginLoader().disablePlugin(this);
-		}
-
-
-		//register event listeners
-		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
-
 	}
 
 	@Override
 	public void onEnable() {
 		// Plugin startup logic
+
+		//set command executors
+		Objects.requireNonNull(getCommand("spectate")).setExecutor(new Spectate());
+
+		//register event listeners
+		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
 
 	}
 
