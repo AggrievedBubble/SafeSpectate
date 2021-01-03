@@ -1,6 +1,7 @@
 package com.jacobneave.safespectate;
 
 import com.jacobneave.safespectate.commands.Spectate;
+import com.jacobneave.safespectate.events.PlayerCommandPreprocess;
 import com.jacobneave.safespectate.events.PlayerQuit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -27,6 +28,7 @@ public final class SafeSpectate extends JavaPlugin implements Listener {
 		Objects.requireNonNull(getCommand("spectate")).setExecutor(new Spectate());
 
 		//register event listeners
+		getServer().getPluginManager().registerEvents(new PlayerCommandPreprocess(), this);
 		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
 
 	}
