@@ -8,7 +8,7 @@ description: A Spigot plugin for smp servers that allows players to use spectato
 website: https://www.jacobneave.com/
 commands:
   spectate:
-    aliases: [c, spec, sp]
+    aliases: [spec, sp, c]
     description: Enter SafeSpectate mode
     permission: SafeSpectate.spectate
     permission-message: no permission
