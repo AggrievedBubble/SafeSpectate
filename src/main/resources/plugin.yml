@@ -10,6 +10,6 @@ commands:
   spectate:
     aliases: [c, spec, sp]
     description: Enter SafeSpectate mode
-    #permission:
-    #permission-message:
-    #usage:
+    permission: SafeSpectate.spectate
+    permission-message: no permission
+    usage: /<command>
