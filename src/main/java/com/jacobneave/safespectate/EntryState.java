@@ -10,14 +10,14 @@ public class EntryState {
 	Location location;
 	GameMode gameMode;
 
-	protected EntryState(Player p) {
+	public EntryState(Player p) {
 		player = p;
 		location = player.getLocation();
 		gameMode = player.getGameMode();
 
 	}
 
-	protected void restore() {
+	public void restore() {
 		player.teleport(location);
 		player.setGameMode(gameMode);
 	}
